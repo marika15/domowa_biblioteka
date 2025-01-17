@@ -1,0 +1,222 @@
+[
+  {
+    "model": "books.borrower",
+    "pk": 1,
+    "fields": {
+      "name": "Jan Kowalski",
+      "email": "jan.kowalski@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 2,
+    "fields": {
+      "name": "Anna Nowak",
+      "email": "anna.nowak@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 3,
+    "fields": {
+      "name": "Marek Wiśniowski",
+      "email": "marek.wisniewski@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 4,
+    "fields": {
+      "name": "Piotr Zieliński",
+      "email": "piotr.zielinski@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 5,
+    "fields": {
+      "name": "Katarzyna Wiśniowska",
+      "email": "katarzyna.wisniewska@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 6,
+    "fields": {
+      "name": "Łukasz Nowicki",
+      "email": "lukasz.nowicki@example.com"
+    }
+  },
+  {
+    "model": "books.borrower",
+    "pk": 7,
+    "fields": {
+      "name": "Joanna Kaczmarek",
+      "email": "joanna.kaczmarek@example.com"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 1,
+    "fields": {
+      "name": "Fantastyka"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 2,
+    "fields": {
+      "name": "Klasyka"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 3,
+    "fields": {
+      "name": "Dramat"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 4,
+    "fields": {
+      "name": "Fantasy"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 5,
+    "fields": {
+      "name": "Science Fiction"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 6,
+    "fields": {
+      "name": "Literatura Rosyjska"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 7,
+    "fields": {
+      "name": "Literatura Polska"
+    }
+  },
+  {
+    "model": "books.category",
+    "pk": 8,
+    "fields": {
+      "name": "Literatura Angielska"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "title": "Władca Pierścieni",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1954,
+      "is_borrowed": true,
+      "borrower": 1,
+      "category": 4
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "title": "Hobbit",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1937,
+      "is_borrowed": false,
+      "borrower": null,
+      "category": 4
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "title": "Zbrodnia i kara",
+      "author": "Fiodor Dostojewski",
+      "publication_year": 1866,
+      "is_borrowed": true,
+      "borrower": 2,
+      "category": 6
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "title": "Mistrz i Małgorzata",
+      "author": "Michaił Bułhakow",
+      "publication_year": 1967,
+      "is_borrowed": false,
+      "borrower": null,
+      "category": 6
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "title": "Lalka",
+      "author": "Bolesław Prus",
+      "publication_year": 1890,
+      "is_borrowed": true,
+      "borrower": 3,
+      "category": 7
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "title": "1984",
+      "author": "George Orwell",
+      "publication_year": 1949,
+      "is_borrowed": false,
+      "borrower": null,
+      "category": 5
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "title": "Duma i uprzedzenie",
+      "author": "Jane Austen",
+      "publication_year": 1813,
+      "is_borrowed": false,
+      "borrower": null,
+      "category": 8
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "title": "Folwark zwierzęcy",
+      "author": "George Orwell",
+      "publication_year": 1945,
+      "is_borrowed": true,
+      "borrower": 1,
+      "category": 5
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "title": "Hamlet",
+      "author": "William Shakespeare",
+      "publication_year": 1603,
+      "is_borrowed": false,
+      "borrower": null,
+      "category": 3
+    }
+  }
+]
