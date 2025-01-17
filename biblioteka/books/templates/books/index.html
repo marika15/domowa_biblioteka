@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Biblioteka domowa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'books/styles.css' %}" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="box">
+        <a href="{% url 'index' %}">
+          <div class="logo"><span>Biblioteka</span>Domowa<span>.pl</span></div>
+        </a>
+        <ul>
+          <a href="{% url 'index' %}">Strona główna</a>
+          <a href="{% url 'category_list' %}">Kategorie</a>
+          <a href="{% url 'borrower_list' %}">Czytelnicy</a>
+        </ul>
+      </header>
+
+      <div class="box">
+        <h3>Twoje książki:</h3>
+        <table class="borrower-table">
+          <thead>
+            <tr>
+              <th>Tytuł</th>
+              <th>Autor</th>
+              <th>Rok wydania</th>
+              <th>Kategoria</th>
+              <!-- Nowa kolumna -->
+              <th>Wypożyczający</th>
+              <th>Akcje</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for book in books %}
+            <tr>
+              <td>{{ book.title }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.publication_year }}</td>
+              <td>{% if book.category %} {{ book.category.name }} {% else %} Brak {% endif %}</td>
+              <!-- Nowa komórka -->
+              <td>{% if book.borrower %} {{ book.borrower.name }} {% else %} Brak {% endif %}</td>
+              <td>
+                <a href="{% url 'edit_book' book.id %}">
+                  <button>Edytuj</button>
+                </a>
+                <a href="{% url 'delete_book' book.id %}">
+                  <button class="c-red">Usuń</button>
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="{% url 'add_book' %}">
+          <button>Dodaj nową książkę</button>
+        </a>
+      </div>
+      <footer class="box">
+        <h5><span>© 2025 Biblioteka Domowa</span> - wykonała Marika Kuczyńska</h5>
+      </footer>
+    </div>
+  </body>
+</html>
