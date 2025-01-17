@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dodaj kategorie</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'books/styles.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="box">
+        <a href="{% url 'index' %}">
+          <div class="logo"><span>Biblioteka</span>Domowa<span>.pl</span></div>
+        </a>
+        <ul>
+          <a href="{% url 'index' %}">Strona główna</a>
+          <a href="{% url 'category_list' %}">Kategorie</a>
+          <a href="{% url 'borrower_list' %}">Czytelnicy</a>
+        </ul>
+      </header>
+
+      <div class="box">
+        <h3>Dodaj nową kategorię:</h3>
+        <form method="post">
+          {% csrf_token %}
+          <label>Nazwa kategorii:</label>
+          <input type="text" name="name" required />
+          <button type="submit">Zapisz</button>
+        </form>
+      </div>
+      <footer class="box">
+        <h5><span>© 2025 Biblioteka Domowa</span> - wykonała Marika Kuczyńska</h5>
+      </footer>
+    </div>
+  </body>
+</html>
